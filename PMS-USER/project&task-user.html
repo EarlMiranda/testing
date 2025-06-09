@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/project&task-user.css" />
+</head>
+<body>
+
+  <div class="sidebar">
+    <img src="images/logo.png" class="logo" alt="Logo">
+        <img src="https://styles.redditmedia.com/t5_j3i1i/styles/communityIcon_y35nhslp44751.png" id="ProfilePicture" alt="Profile Picture">
+        <p class="fullname">Last Name, First Name</p>
+        <a href="profile-user.html" class="myprofile">Edit Profile</a>
+
+        <a href="dashboard-user.html" class="sidebarlink">
+            <img src="images/dashboard-icon.png" class="icon" alt="Dashboard Icon"> Dashboard
+        </a>
+        <a href="project&task-user.html" class="sidebarlink">
+            <img src="images/project-and-task-icon.png" class="icon" alt="Project and Task Icon"> Project and Task
+        </a>
+        <a href="employees&team-user.html" class="sidebarlink">
+            <img src="images/employee-and-team-icon.png" class="icon" alt="Employee and Team Icon"> Employee and Team
+        </a>
+        <a href="report&files-user.html" class="sidebarlink">
+            <img src="images/report-and-files-icon.png" class="icon" alt="Report and Files Icon"> Report and Files
+        </a>
+        <a href="settings-user.html" class="sidebarlink">
+            <img src="images/settings-icon.png" class="icon" alt="Settings Icon"> Settings
+        </a>
+        <hr class="sidebarline">
+        <a href="sign_out.html" class="sidebarlink">
+            <img src="images/sign-out-icon.png" class="icon" alt="Sign Out Icon"> Sign out
+        </a>
+</div>
+
+  <div class="main-content">
+    <div class="main-content-inner">
+      <h1 class="dashboard-title">Project and Task</h1>
+      <h2 class="destination">
+        <span class="dashboard">Project and Task</span> / <span class="home">Home</span>
+      </h2>
+
+        <div class="top-panels">
+
+<!-- To-Do List -->
+        <div class="todo-list">
+          <div class="todolist-header">To-Do Lists</div>
+          <div class="todolist-filters">
+            <div class="todo-filters">Priority</div>
+            <div class="todo-filters">Title</div>
+            <div class="todo-filters">Type</div>
+            <div class="todo-filters">Due Date</div>            
+          </div>
+
+                <div class="todolist-rows-list">
+                    <div class="todolist-row">
+                        <div class="todo-priority div-cell"><span class="priority low"></span> Low</div>
+                        <div class="todolist-title"><a href="todolist1.html">Project 1</a></div>
+                        <div class="todolist-type">Project</div>
+                        <div class="todolist-date">May 20, 2025</div>
+                    </div>
+                    <div class="todolist-row">
+                       <div class="todo-priority div-cell"><span class="priority low"></span> Low</div>
+                        <div class="todolist-title"><a href="todolist2.html">Project 2</a></div>
+                        <div class="todolist-type">Project</div>
+                        <div class="todolist-date">May 18, 2025</div>
+                    </div>
+                    <div class="todolist-row">
+                       <div class="todo-priority div-cell"><span class="priority low"></span> Low</div>
+                        <div class="todolist-title"><a href="todolist3.html">Project 3</a></div>
+                        <div class="todolist-type">Project</div>
+                        <div class="todolist-date">May 15, 2025</div>
+                    </div>
+                    <div class="todolist-row">
+                       <div class="todo-priority div-cell"><span class="priority low"></span> Low</div>
+                        <div class="todolist-title"><a href="todolist4.html">Activity</a></div>
+                        <div class="todolist-type">Task</div>
+                        <div class="todolist-date">May 10, 2025</div>
+                    </div>
+                    <div class="todolist-row">
+                       <div class="todo-priority div-cell"><span class="priority low"></span> Low</div>
+                        <div class="todolist-title"><a href="todolist4.html">Activity</a></div>
+                        <div class="todolist-type">Task</div>
+                        <div class="todolist-date">May 10, 2025</div>
+                    </div>
+                    <div class="todolist-row">
+                       <div class="todo-priority div-cell"><span class="priority low"></span> Low</div>
+                        <div class="todolist-title"><a href="todolist4.html">Activity</a></div>
+                        <div class="todolist-type">Task</div>
+                        <div class="todolist-date">May 10, 2025</div>
+                    </div>                    
+                    <div class="todolist-row">
+                       <div class="todo-priority div-cell"><span class="priority low"></span> Low</div>
+                        <div class="todolist-title"><a href="todolist4.html">Activity</a></div>
+                        <div class="todolist-type">Task</div>
+                        <div class="todolist-date">May 10, 2025</div>
+                    </div>
+                    <div class="todolist-row">
+                       <div class="todo-priority div-cell"><span class="priority low"></span> Low</div>
+                        <div class="todolist-title"><a href="todolist4.html">Activity</a></div>
+                        <div class="todolist-type">Task</div>
+                        <div class="todolist-date">May 10, 2025</div>
+                    </div>
+                </div>
+        </div>
+
+
+<!-- Saved Works -->
+<div class="saved-works">
+  <div class="savedworks-header">Saved Works</div>
+  <div class="savedworks-filters">
+    <div class="savedfilters">Title</div>
+    <div class="savedfilters">Last Opened</div>
+  </div>
+
+  <div class="savedworks-rows-list">
+    <div class="savedworks-row">
+      <div class="saved-title div-cell">Draft 1</div>
+      <div class="saved-lastopened div-cell">20 minutes ago</div>
+    </div>
+    <div class="savedworks-row">
+      <div class="saved-title div-cell">Finals</div>
+      <div class="saved-lastopened div-cell">1 hour ago</div>
+    </div>
+    <div class="savedworks-row">
+      <div class="saved-title div-cell">Module 7</div>
+      <div class="saved-lastopened div-cell">3 hours ago</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Completed -->
+<div class="completed">
+  <div class="completed-header">Completed</div>
+  <div class="completed-filters">
+    <div class="completedfilter">Title</div>
+    <div class="completedfilter">Status</div>
+  </div>
+
+  <div class="completed-rows-list">
+    <div class="completed-row">
+      <div class="completed-title div-cell">Activity 2</div>
+      <div class="completed-status div-cell">Checked</div>
+    </div>
+    <div class="completed-row">
+      <div class="completed-title div-cell">Midterm Laboratory</div>
+      <div class="completed-status div-cell">Checked</div>
+    </div>
+    <div class="completed-row">
+      <div class="completed-title div-cell">Logo Activity</div>
+      <div class="completed-status div-cell">Checked</div>
+    </div>
+    <div class="completed-row">
+      <div class="completed-title div-cell">Prototyping</div>
+      <div class="completed-status div-cell">Checked</div>
+    </div>
+    <div class="completed-row">
+      <div class="completed-title div-cell">Reporting</div>
+      <div class="completed-status div-cell">Checked</div>
+    </div>
+    <div class="completed-row">
+      <div class="completed-title div-cell">Quiz</div>
+      <div class="completed-status div-cell">Checked</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Project and Task Library -->
+<div class="task-library">
+  <div class="library-header">Project and Task Library</div>
+  <div class="library-filters">
+    <div class="filter-cell">Team</div>
+    <div class="filter-cell">Priority</div>
+    <div class="filter-cell">Title</div>
+    <div class="filter-cell">Type</div>
+    <div class="filter-cell">Assigned By</div>
+    <div class="filter-cell status">Status</div>
+    <div class="filter-cell">Due Date</div>
+  </div>
+
+  <div class="library-rows-list">
+    <div class="library-row">
+      <div class="library-team div-cell">Advance Database</div>
+      <div class="library-priority div-cell"><span class="priority high"></span> High</div>
+      <div class="library-title div-cell">Draft 1</div>
+      <div class="library-type div-cell">Task</div>
+      <div class="library-assignedby div-cell">Kristine Stewart</div>
+      <div class="library-status div-cell"><span class="status completed">Completed</span></div>
+      <div class="library-date div-cell">May 31, 2025</div>
+    </div>
+  </div>
+</div>
+
+
+            <button class="create-work create-btn">
+                Create<br>Work
+<svg xmlns="http://www.w3.org/2000/svg" width="76" height="77" viewBox="0 0 76 77" fill="currentColor">
+  <path d="M58.5813 46.6375L53.4625 51.7563L58.5813 56.875L51.7563 63.7L76.2125 88.1563C79.625 91.5688 84.7438 91.5688 88.1563 88.1563C91.5688 84.7438 91.5688 79.625 88.1563 76.2125L58.5813 46.6375ZM80.7625 85.3125C78.4875 85.3125 76.2125 83.6063 76.2125 80.7625C76.2125 78.4875 77.9188 76.2125 80.7625 76.2125C83.6063 76.2125 85.3125 77.9188 85.3125 80.7625C85.3125 83.6063 83.6063 85.3125 80.7625 85.3125ZM20.475 45.5L25.5938 42.0875L34.125 32.4188L39.2438 37.5375L44.3625 32.4188L43.7938 31.85C44.9313 29.0063 45.5 26.1625 45.5 22.75C45.5 10.2375 35.2625 0 22.75 0C19.3375 0 16.4938 0.56875 13.65 1.70625L30.1438 18.2L18.2 30.1438L1.70625 13.65C0.56875 16.4938 0 19.3375 0 22.75C0 34.6938 9.1 43.7938 20.475 45.5Z" fill="currentColor"/>
+  <path d="M45.4998 61.4251L50.6186 56.8751L45.4998 51.7564L77.9186 19.3376L84.7436 17.0626L90.9998 4.5501L87.0186 0.568848L73.9373 6.25635L71.0936 13.0814L39.2436 45.5001L34.1248 40.3814L29.5748 45.5001C29.5748 45.5001 34.1248 48.9126 29.0061 54.0314C26.1623 56.8751 21.6123 53.4626 13.0811 61.9939L1.1373 73.9376C1.1373 73.9376 -2.2752 79.6251 4.54981 86.4501C11.3748 93.2751 17.0623 89.8626 17.0623 89.8626L29.0061 77.9189C36.9686 69.9564 34.1248 64.8376 36.3998 62.5626C41.5186 57.4439 45.4998 61.4251 45.4998 61.4251ZM27.8686 59.1501L31.8498 63.1314L10.2373 84.7439L6.25606 80.7626L27.8686 59.1501Z" fill="currentColor"/>
+</svg>
+            </button>
+
+        </div>
+
+
+        <div id="createWorkPopup" class="popup-form" style="display: none;">
+          <div class="popup-inner">
+            <h2>Submit Your Work</h2>
+
+            <label for="workTitle" class="form-label">Title</label>
+            <input type="text" id="workTitle" placeholder="e.g., Science Project" class="form-input" />
+
+            <label for="workFile" class="form-label">Attach File</label>
+            <input type="file" id="workFile" class="form-input" />
+
+            <div class="popup-buttons">
+              <button onclick="submitWork()" class="popup-add">Submit</button>
+              <button onclick="toggleCreateWorkPopup()" class="popup-cancel">Cancel</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    2025 | ManageIT - Cavite State University Imus Campus
+  </footer>
+
+  <script>
+    document.querySelectorAll('.sidebarlink').forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add('active');
+      }
+    });
+
+    function toggleCreateWorkPopup() {
+      const popup = document.getElementById("createWorkPopup");
+      popup.style.display = popup.style.display === "none" ? "flex" : "none";
+    }
+
+    function submitWork() {
+      const title = document.getElementById("workTitle").value;
+      const file = document.getElementById("workFile").files[0];
+
+      if (!title || !file) {
+        alert("Please provide both a title and a file.");
+        return;
+      }
+
+      // Placeholder for submission logic
+      alert(`Work submitted:\nTitle: ${title}\nFile: ${file.name}`);
+      toggleCreateWorkPopup();
+    }
+  </script>
+
+</body>
+</html>
