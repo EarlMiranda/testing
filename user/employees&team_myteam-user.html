@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/employees&team_myteam-user.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Employees and Team (my team)</title>
+</head>
+<body>
+
+  <div class="sidebar">
+    <img src="images/logo.png" class="logo" alt="Logo">
+        <img src="https://styles.redditmedia.com/t5_j3i1i/styles/communityIcon_y35nhslp44751.png" id="ProfilePicture" alt="Profile Picture">
+        <p class="fullname">Last Name, First Name</p>
+        <a href="profile-user.html" class="myprofile">Edit Profile</a>
+
+        <a href="dashboard-user.html" class="sidebarlink">
+            <img src="images/dashboard-icon.png" class="icon" alt="Dashboard Icon"> Dashboard
+        </a>
+        <a href="project&task-user.html" class="sidebarlink">
+            <img src="images/project-and-task-icon.png" class="icon" alt="Project and Task Icon"> Project and Task
+        </a>
+        <a href="employees&team-user.html" class="sidebarlink">
+            <img src="images/employee-and-team-icon.png" class="icon" alt="Employee and Team Icon"> Employee and Team
+        </a>
+        <a href="report&files-user.html" class="sidebarlink">
+            <img src="images/report-and-files-icon.png" class="icon" alt="Report and Files Icon"> Report and Files
+        </a>
+        <a href="settings-user.html" class="sidebarlink">
+            <img src="images/settings-icon.png" class="icon" alt="Settings Icon"> Settings
+        </a>
+        <hr class="sidebarline">
+        <a href="sign_out.html" class="sidebarlink">
+            <img src="images/sign-out-icon.png" class="icon" alt="Sign Out Icon"> Sign out
+        </a>
+</div>
+
+<div class="main-content">
+    <div class="main-content-inner">
+        <h1 class="page-title">Employees and Team</h1>
+        <h2 class="destination"><span class="dashboard">Employees and Team</span> / <span class="home">Home</span></h2>
+        
+        <div class="team-content">
+        <div class="header">
+          <div class="banner"></div>
+          <div class="info">
+            <div class="profile-icon"></div>
+           <div>
+              <div class="team-title"> Team 1
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M16 4.1917C16.0006 4.08642 15.9804 3.98206 15.9406 3.8846C15.9008 3.78714 15.8421 3.69849 15.768 3.62374L12.376 0.231996C12.3012 0.157856 12.2126 0.0992007 12.1151 0.0593919C12.0176 0.0195832 11.9133 -0.000595299 11.808 1.33705e-05C11.7027 -0.000595299 11.5983 0.0195832 11.5009 0.0593919C11.4034 0.0992007 11.3147 0.157856 11.24 0.231996L8.976 2.49583L0.232013 11.2392C0.157868 11.3139 0.0992079 11.4026 0.0593963 11.5C0.0195847 11.5975 -0.000595342 11.7019 1.33714e-05 11.8071V15.1989C1.33714e-05 15.411 0.0842987 15.6145 0.234328 15.7645C0.384356 15.9145 0.587839 15.9988 0.800012 15.9988H4.19201C4.30395 16.0049 4.41592 15.9874 4.52066 15.9474C4.6254 15.9075 4.72057 15.8459 4.80001 15.7668L13.496 7.02349L15.768 4.79966C15.841 4.72213 15.9005 4.63289 15.944 4.53568C15.9517 4.47191 15.9517 4.40745 15.944 4.34369C15.9477 4.30645 15.9477 4.26893 15.944 4.2317L16 4.1917ZM3.86401 14.3989H1.60001V12.1351L9.544 4.1917L11.808 6.45553L3.86401 14.3989ZM12.936 5.32762L10.672 3.06378L11.808 1.93587L14.064 4.1917L12.936 5.32762Z" fill="#7A7F7A"/>
+                </svg>
+              </div>
+              <p class="team-name-creator"> John Doe </p>
+              <p class="team-name-membercount"> 3 Members</p>
+            </div>
+            <button class="view-team-code-button" onclick="openTeamCodePopup()">View Team Code</button>
+            <!-- View Team Code Popup -->
+             <div id="teamCodePopup" class="popup-overlay">
+              <div class="popup-box">
+                <h2 class="popup-title">Team Code</h2>
+                <hr class="horizontal-line">
+                <div class="team-code-display" id="teamCodeText">Team12345</div>
+                <p class="popup-description">Sharing a team code enables others to join your team.</p>
+                <div class="popup-actions">
+                  <button class="popup-close" onclick="closeTeamCodePopup()">Close</button>
+                </div>
+              </div>
+            </div>
+            
+            <button class="delete-team-button">Delete Team</button>
+          </div>
+        </div>
+        
+        <div class="activity-feed">
+          <div class="post-section">
+            <div class="post-container">
+              <div class="post-input-row">
+                <div class="user-avatar"></div>
+                <div class="post-box">
+                  <div class="user-name">John Doe</div>
+                  <div class="custom-input-box" contenteditable="true" data-placeholder="Say something about your post..."></div>
+                  <button class="post-button">Post</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="create-work">
+              <button onclick="openCreateWorkPopup()"> Create <br> Work 
+                <svg xmlns="http://www.w3.org/2000/svg" width="76" height="77" viewBox="0 0 76 77" fill="none">
+                  <path d="M58.5813 46.6375L53.4625 51.7563L58.5813 56.875L51.7563 63.7L76.2125 88.1563C79.625 91.5688 84.7438 91.5688 88.1563 88.1563C91.5688 84.7438 91.5688 79.625 88.1563 76.2125L58.5813 46.6375ZM80.7625 85.3125C78.4875 85.3125 76.2125 83.6063 76.2125 80.7625C76.2125 78.4875 77.9188 76.2125 80.7625 76.2125C83.6063 76.2125 85.3125 77.9188 85.3125 80.7625C85.3125 83.6063 83.6063 85.3125 80.7625 85.3125ZM20.475 45.5L25.5938 42.0875L34.125 32.4188L39.2438 37.5375L44.3625 32.4188L43.7938 31.85C44.9313 29.0063 45.5 26.1625 45.5 22.75C45.5 10.2375 35.2625 0 22.75 0C19.3375 0 16.4938 0.56875 13.65 1.70625L30.1438 18.2L18.2 30.1438L1.70625 13.65C0.56875 16.4938 0 19.3375 0 22.75C0 34.6938 9.1 43.7938 20.475 45.5Z" fill="currentColor"/>
+                  <path d="M45.4998 61.425L50.6186 56.875L45.4998 51.7562L77.9186 19.3375L84.7436 17.0625L90.9998 4.54998L87.0186 0.568726L73.9373 6.25623L71.0936 13.0812L39.2436 45.5L34.1248 40.3812L29.5748 45.5C29.5748 45.5 34.1248 48.9125 29.0061 54.0312C26.1623 56.875 21.6123 53.4625 13.0811 61.9937L1.1373 73.9375C1.1373 73.9375 -2.2752 79.625 4.54981 86.45C11.3748 93.275 17.0623 89.8625 17.0623 89.8625L29.0061 77.9187C36.9686 69.9562 34.1248 64.8375 36.3998 62.5625C41.5186 57.4437 45.4998 61.425 45.4998 61.425ZM27.8686 59.15L31.8498 63.1312L10.2373 84.7437L6.25606 80.7625L27.8686 59.15Z" fill="currentColor"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!-- Create Work Popup -->
+           <div id="createWorkPopup" class="creatework-popup-overlay">
+            <div class="create-work-popup-box">
+              <h2 class="popup-title">Creating Work</h2>
+              <button class="close-btn" onclick="closeCreateWorkPopup()"> × </button>
+              <hr class="horizontal-line">
+              
+              <label class="field-label">Enter the work's title</label>
+              <input type="text" class="text-input" placeholder="Work Title">
+              
+              <label class="field-label">Enter the work's due date</label>
+              <input type="date" class="text-input">
+              
+              <label class="field-label clickable" onclick="openTeamPopup()">Click here to select team to assign</label>
+              <!-- Select Team Pop Up -->
+              <div id="teamPopup" class="popup-overlay" style="display: none;">
+                <div class="popup-box small">
+                  <h2 class="popup-title">Select teams to assign</h3>
+                  <p class="popup-description">
+                    You can only assign to teams that you are an admin of or have created.
+                  </p>
+
+                  <div class="team-list">
+                    <div class="team-item" onclick="toggleTeam(this, 'Team 1')">
+                      <div class="team-icon"></div>
+                      <span>Team 1</span>
+                    </div>
+                    <div class="team-item" onclick="toggleTeam(this, 'Team 2')">
+                      <div class="team-icon"></div>
+                      <span>Team 2</span>
+                    </div>
+                    <div class="team-item" onclick="toggleTeam(this, 'Team 3')">
+                      <div class="team-icon"></div>
+                      <span>Team 3</span>
+                    </div>
+                    <div class="team-item" onclick="toggleTeam(this, 'Team 4')">
+                      <div class="team-icon"></div>
+                      <span>Team 4</span>
+                    </div>
+                    <div class="team-item" onclick="toggleTeam(this, 'Team 5')">
+                      <div class="team-icon"></div>
+                      <span>Team 5</span>
+                    </div>
+                    <div class="team-item" onclick="toggleTeam(this, 'Team 6')">
+                      <div class="team-icon"></div>
+                      <span>Team 6</span>
+                    </div>
+                  </div>
+              
+                  <div style="text-align: center; margin-top: 20px;">
+                    <button onclick="submitTeam()" class="confirm-btn">Confirm</button>
+                  </div>
+                </div>
+              </div>
+              
+              <label class="field-label clickable" onclick="openPriorityPopup()">Select Priority</label>
+              <hr class="horizontal-line">
+
+              <!-- Select Priority Popup -->
+              <div id="priorityPopup" class="popup-overlay" style="display: none;">
+                <div class="popup-box small">
+                  <h2 class="popup-title">Select Priority</h2>
+
+                  <hr class="horizontal-line">
+              
+                  <div class="priority-options">
+                    <label>
+                      <input type="radio" name="priority" value="Low" onclick="setPriority(this)">
+                      <span class="circle green"></span> Low
+                    </label>
+                    <label>
+                      <input type="radio" name="priority" value="Medium" onclick="setPriority(this)">
+                      <span class="circle orange"></span> Medium
+                    </label>
+                    <label>
+                      <input type="radio" name="priority" value="High" onclick="setPriority(this)">
+                      <span class="circle red"></span> High
+                    </label>
+                  </div>
+              
+                  <br>
+                  <div class="popup-actions">
+                  <button class="popup-close" onclick="closePriorityPopup()">Close</button>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="description-box" contenteditable="true">Your work description goes here. Click to edit</div>
+              
+              <div class="three-buttons">
+                <div class="left-buttons">
+                  <button class="upload-attachments-btn">Upload Attachments</button>
+                  <button class="save-work-btn" onclick="openSaveWorkPopup()">Save Work</button>
+                  
+                  <!--Save Work Button Pop up-->
+                  <div id="savePopup" class="popup-overlay">
+                    <div class="popup-box small">
+                      <h2 class="popup-title"> Your Work is saved!</h2>
+                      <div class="savework-ok-btn">
+                        <button class="ok-btn" onclick="closeSavePopup()">Okay</button> </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="right-button">
+                    <button class="publish-btn" onclick="openPublishPopup()">Publish Work</button> </div>
+                    <!-- Publish Popup -->
+                     <div id="publishPopup" class="popup-overlay">
+                      <div class="popup-box small">
+                        <h2 class="popup-title"> You're about to publish a work.</h2>
+                        <p>Are you sure you want to publish now?</p>
+                        <div style="margin-top: 20px;">
+                          <button class="confirm-publish-btn" onclick="confirmPublish()">Yes, Publish</button>
+                          <button class="cancel-btn" onclick="closePublishPopup()">Cancel</button>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+             </div>
+          </div>
+            
+<div class="posted-container-lists">
+<div class="posted-container">
+  <div class="user-avatar"></div>
+  <div class="posted-box">
+    <div class="user-name">John Doe</div>
+    <span class="date">April 4</span>
+    <p class="posted-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <button class="delete-btn" title="Delete" onclick="handleDelete()">×</button>
+  </div>
+</div>
+
+<div class="posted-container">
+  <div class="user-avatar"></div>
+  <div class="posted-box">
+    <button class="delete-btn" title="Delete" onclick="handleDelete()">×</button>
+    
+    <div class="user-name">John Doe</div>
+    <div class="date">March 27</div>
+
+    <div class="posted-work-wrapper">
+      <div class="posted-work">Posted New Work</div>
+      <div class="main-work" onclick="openActivity()">Activity 3</div>
+    </div>
+
+    <div id="ActivityPopup" class="popup-overlay">
+      <div class="activity-popup-box">
+        <div class="priority">● High Priority</div>
+        <button class="close-btn" onclick="closeActivity()">×</button>
+        <div class="task-title">Task/Project Title</div>
+        <div class="due-date">Due April 23, 2025</div>
+
+        <button class="mark-started-btn" onclick="openMarkWork()">Mark work as started</button>
+        
+        <div id="MarkWorkPopup" class="popup-overlay">
+          <div class="popup-box small">
+            <div class="popup-description">This will be reflected in your<div>Productivity Tracker</div></div>
+            <div class="popup-title">Mark as started?</div>
+            <div class="confirm-markup-buttons">
+              <button class="markwork-no-btn" onclick="closeConfirm()">No</button>
+              <button class="markwork-yes-btn" onclick="markAsStarted()">Yes</button>
+            </div>
+          </div>
+        </div>
+
+        <hr class="horizontal line">
+
+        <div class="activity-popup-content">
+          Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
+          <div class="attachments-label">Below are the attachments:</div>
+        </div>
+
+        <hr class="horizontal-line">
+
+        <div class="activity-buttons">
+          <div class="left-button">
+            <button class="mark-done">Mark as done</button>
+          </div>
+          <div class="right-buttons">
+            <button class="upload-btn">Upload Attachment</button>
+            <button class="submit-btn">Submit Work</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+        
+          
+    </div>
+    </div>
+</div>
+
+<footer>
+        2025 | ManageIT - Cavite State University Imus Campus   
+</footer>
+
+<script>
+ // TEAM CODE POPUP 
+ function openTeamCodePopup() {
+    document.getElementById('teamCodePopup').style.display = 'flex';
+  }
+
+  function closeTeamCodePopup() {
+    document.getElementById('teamCodePopup').style.display = 'none';
+  }
+
+  // CREATE WORK POPUP 
+  function openCreateWorkPopup() {
+    document.getElementById("createWorkPopup").style.display = "flex";
+  }
+
+  function closeCreateWorkPopup() {
+    document.getElementById("createWorkPopup").style.display = "none";
+  }
+
+  // TEAMS TO ASSIGN POPUP 
+  let selectedTeams = [];
+
+  function openTeamPopup() {
+    document.getElementById("teamPopup").style.display = "flex";
+  }
+
+  function closeTeamPopup() {
+    document.getElementById("teamPopup").style.display = "none";
+  }
+
+  function toggleTeam(el, teamName) {
+    el.classList.toggle("selected");
+    if (selectedTeams.includes(teamName)) {
+      selectedTeams = selectedTeams.filter(t => t !== teamName);
+    } else {
+      selectedTeams.push(teamName);
+    }
+  }
+
+  function submitTeam() {
+    alert("Selected teams: " + selectedTeams.join(", "));
+    closeTeamPopup();
+  }
+
+  // PRIORITY POPUP 
+  function openPriorityPopup() {
+    document.getElementById("priorityPopup").style.display = "flex";
+  }
+
+  function closePriorityPopup() {
+    document.getElementById("priorityPopup").style.display = "none";
+  }
+
+  function setPriority(input) {
+    document.getElementById("selectedPriority").innerText = input.value;
+    closePriorityPopup();
+  }
+
+  //  SAVE / PUBLISH POPUPS
+  function openSaveWorkPopup() {
+    document.getElementById("savePopup").style.display = "flex";
+  }
+
+  function closeSavePopup() {
+    document.getElementById("savePopup").style.display = "none";
+  }
+
+  function openPublishPopup() {
+    document.getElementById("publishPopup").style.display = "flex";
+  }
+
+  function closePublishPopup() {
+    document.getElementById("publishPopup").style.display = "none";
+  }
+
+  function confirmPublish() {
+    alert("Work published!");
+    closePublishPopup();
+  }
+
+  // ACTIVITY POPUP 
+  function openActivity() {
+    document.getElementById('ActivityPopup').style.display = 'flex';
+  }
+
+  function closeActivity() {
+    document.getElementById('ActivityPopup').style.display = 'none';
+  }
+
+  function openMarkWork() {
+    document.getElementById("MarkWorkPopup").style.display = "flex";
+  }
+
+  function closeConfirm() {
+    document.getElementById("MarkWorkPopup").style.display = "none";
+  }
+
+  function markAsStarted() {
+    document.getElementById("MarkWorkPopup").style.display = "none";
+  }
+
+  // CLOSE POPUPS WHEN CLICKING OUTSIDE
+  window.addEventListener("click", function (e) {
+    const popups = [
+      { id: "savePopup", close: closeSavePopup },
+      { id: "publishPopup", close: closePublishPopup },
+      { id: "createWorkPopup", close: closeCreateWorkPopup },
+      { id: "teamCodePopup", close: closeTeamCodePopup },
+      { id: "teamPopup", close: closeTeamPopup },
+      { id: "priorityPopup", close: closePriorityPopup },
+      { id: "ActivityPopup", close: closeActivity },
+      { id: "MarkWorkPopup", close: closeConfirm },
+    ];
+
+    popups.forEach(({ id, close }) => {
+      const el = document.getElementById(id);
+      if (e.target === el) close();
+    });
+  });
+
+  </script>
+</body>
+</html>

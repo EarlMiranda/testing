@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/profile-user.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile User</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+
+
+  <div class="sidebar">
+    <img src="images/logo.png" class="logo" alt="Logo">
+        <img src="https://styles.redditmedia.com/t5_j3i1i/styles/communityIcon_y35nhslp44751.png" id="ProfilePicture" alt="Profile Picture">
+        <p class="fullname">Last Name, First Name</p>
+        <a href="profile-user.html" class="myprofile">Edit Profile</a>
+
+        <a href="dashboard-user.html" class="sidebarlink">
+            <img src="images/dashboard-icon.png" class="icon" alt="Dashboard Icon"> Dashboard
+        </a>
+        <a href="project&task-user.html" class="sidebarlink">
+            <img src="images/project-and-task-icon.png" class="icon" alt="Project and Task Icon"> Project and Task
+        </a>
+        <a href="employees&team-user.html" class="sidebarlink">
+            <img src="images/employee-and-team-icon.png" class="icon" alt="Employee and Team Icon"> Employee and Team
+        </a>
+        <a href="report&files-user.html" class="sidebarlink">
+            <img src="images/report-and-files-icon.png" class="icon" alt="Report and Files Icon"> Report and Files
+        </a>
+        <a href="settings-user.html" class="sidebarlink">
+            <img src="images/settings-icon.png" class="icon" alt="Settings Icon"> Settings
+        </a>
+        <hr class="sidebarline">
+        <a href="sign_out.html" class="sidebarlink">
+            <img src="images/sign-out-icon.png" class="icon" alt="Sign Out Icon"> Sign out
+        </a>
+</div>
+
+<div class="main-content">
+    <div class="main-content-inner">
+        <h1 class="dashboard-title">My Profile</h1>
+        <h2 class="destination"><span class="Dashboard">Profile</span> / <span class="home">Home</span></h2>
+
+<div class="parent">
+
+  <div class="profile-card">
+      <div class="profile-header">
+        <div class="user-img"></div>
+        <div class="profile-main">
+          <p class="pronouns">He/Him</p>
+          <h2 id="name">John Doe </h2>
+
+          <p id="username">@JohnDoe123
+            <button class="edit-btn" title="Edit" onclick="openEditModal('username')">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+              <path d="M15 3.92972C15.0006 3.83102 14.9816 3.73318 14.9443 3.64181C14.907 3.55044 14.852 3.46733 14.7825 3.39726L11.6025 0.217496C11.5324 0.14799 11.4493 0.0930006 11.3579 0.05568C11.2665 0.0183593 11.1687 -0.000558092 11.07 1.25348e-05C10.9713 -0.000558092 10.8734 0.0183593 10.7821 0.05568C10.6907 0.0930006 10.6076 0.14799 10.5375 0.217496L8.415 2.33984L0.217512 10.5367C0.148001 10.6068 0.0930074 10.6899 0.055684 10.7813C0.0183606 10.8726 -0.000558133 10.9705 1.25357e-05 11.0692V14.249C1.25357e-05 14.4478 0.07903 14.6386 0.219682 14.7792C0.360334 14.9199 0.551099 14.9989 0.750011 14.9989H3.93001C4.03495 15.0046 4.13993 14.9882 4.23812 14.9507C4.33632 14.9133 4.42554 14.8556 4.50001 14.7814L12.6525 6.58452L14.7825 4.49968C14.8509 4.42699 14.9067 4.34334 14.9475 4.2522C14.9547 4.19242 14.9547 4.13199 14.9475 4.07221C14.951 4.0373 14.951 4.00213 14.9475 3.96722L15 3.92972ZM3.62251 13.499H1.50001V11.3767L8.9475 3.92972L11.07 6.05206L3.62251 13.499ZM12.1275 4.99464L10.005 2.8723L11.07 1.81488L13.185 3.92972L12.1275 4.99464Z"/>
+              </svg>
+            </button>
+          </p>
+
+          <p class="description">I am a software engineer and also a gamer
+            <button class="edit-btn" title="Edit" onclick="openEditModal('description')">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+              <path d="M15 3.92972C15.0006 3.83102 14.9816 3.73318 14.9443 3.64181C14.907 3.55044 14.852 3.46733 14.7825 3.39726L11.6025 0.217496C11.5324 0.14799 11.4493 0.0930006 11.3579 0.05568C11.2665 0.0183593 11.1687 -0.000558092 11.07 1.25348e-05C10.9713 -0.000558092 10.8734 0.0183593 10.7821 0.05568C10.6907 0.0930006 10.6076 0.14799 10.5375 0.217496L8.415 2.33984L0.217512 10.5367C0.148001 10.6068 0.0930074 10.6899 0.055684 10.7813C0.0183606 10.8726 -0.000558133 10.9705 1.25357e-05 11.0692V14.249C1.25357e-05 14.4478 0.07903 14.6386 0.219682 14.7792C0.360334 14.9199 0.551099 14.9989 0.750011 14.9989H3.93001C4.03495 15.0046 4.13993 14.9882 4.23812 14.9507C4.33632 14.9133 4.42554 14.8556 4.50001 14.7814L12.6525 6.58452L14.7825 4.49968C14.8509 4.42699 14.9067 4.34334 14.9475 4.2522C14.9547 4.19242 14.9547 4.13199 14.9475 4.07221C14.951 4.0373 14.951 4.00213 14.9475 3.96722L15 3.92972ZM3.62251 13.499H1.50001V11.3767L8.9475 3.92972L11.07 6.05206L3.62251 13.499ZM12.1275 4.99464L10.005 2.8723L11.07 1.81488L13.185 3.92972L12.1275 4.99464Z"/>
+              </svg>
+            </button></p>
+        </div>
+      </div>
+
+
+<div class="info-section">
+      <div class="info-labels">
+        <div>Job Title</div>
+        <div>Location</div>
+        <div>Email</div>
+        <div>Birthday</div>
+        <div>Gender</div>
+      </div>
+      <div class="info-values">
+        <div>
+          <button class="edit-btn" title="Edit" onclick="openEditModal('jobTitle')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path d="M15 3.92972C15.0006 3.83102 14.9816 3.73318 14.9443 3.64181C14.907 3.55044 14.852 3.46733 14.7825 3.39726L11.6025 0.217496C11.5324 0.14799 11.4493 0.0930006 11.3579 0.05568C11.2665 0.0183593 11.1687 -0.000558092 11.07 1.25348e-05C10.9713 -0.000558092 10.8734 0.0183593 10.7821 0.05568C10.6907 0.0930006 10.6076 0.14799 10.5375 0.217496L8.415 2.33984L0.217512 10.5367C0.148001 10.6068 0.0930074 10.6899 0.055684 10.7813C0.0183606 10.8726 -0.000558133 10.9705 1.25357e-05 11.0692V14.249C1.25357e-05 14.4478 0.07903 14.6386 0.219682 14.7792C0.360334 14.9199 0.551099 14.9989 0.750011 14.9989H3.93001C4.03495 15.0046 4.13993 14.9882 4.23812 14.9507C4.33632 14.9133 4.42554 14.8556 4.50001 14.7814L12.6525 6.58452L14.7825 4.49968C14.8509 4.42699 14.9067 4.34334 14.9475 4.2522C14.9547 4.19242 14.9547 4.13199 14.9475 4.07221C14.951 4.0373 14.951 4.00213 14.9475 3.96722L15 3.92972ZM3.62251 13.499H1.50001V11.3767L8.9475 3.92972L11.07 6.05206L3.62251 13.499ZM12.1275 4.99464L10.005 2.8723L11.07 1.81488L13.185 3.92972L12.1275 4.99464Z"/>
+            </svg>            
+          </button>
+          <span>Software Engineer</span>
+        </div>
+
+        <div>
+          <button class="edit-btn" title="Edit" onclick="openEditModal('location')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path d="M15 3.92972C15.0006 3.83102 14.9816 3.73318 14.9443 3.64181C14.907 3.55044 14.852 3.46733 14.7825 3.39726L11.6025 0.217496C11.5324 0.14799 11.4493 0.0930006 11.3579 0.05568C11.2665 0.0183593 11.1687 -0.000558092 11.07 1.25348e-05C10.9713 -0.000558092 10.8734 0.0183593 10.7821 0.05568C10.6907 0.0930006 10.6076 0.14799 10.5375 0.217496L8.415 2.33984L0.217512 10.5367C0.148001 10.6068 0.0930074 10.6899 0.055684 10.7813C0.0183606 10.8726 -0.000558133 10.9705 1.25357e-05 11.0692V14.249C1.25357e-05 14.4478 0.07903 14.6386 0.219682 14.7792C0.360334 14.9199 0.551099 14.9989 0.750011 14.9989H3.93001C4.03495 15.0046 4.13993 14.9882 4.23812 14.9507C4.33632 14.9133 4.42554 14.8556 4.50001 14.7814L12.6525 6.58452L14.7825 4.49968C14.8509 4.42699 14.9067 4.34334 14.9475 4.2522C14.9547 4.19242 14.9547 4.13199 14.9475 4.07221C14.951 4.0373 14.951 4.00213 14.9475 3.96722L15 3.92972ZM3.62251 13.499H1.50001V11.3767L8.9475 3.92972L11.07 6.05206L3.62251 13.499ZM12.1275 4.99464L10.005 2.8723L11.07 1.81488L13.185 3.92972L12.1275 4.99464Z"/>
+            </svg>
+          </button>
+          <span>New York City</span>
+        </div>
+
+        <div>
+          <button class="edit-btn" title="Edit" onclick="openEditModal('email')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path d="M15 3.92972C15.0006 3.83102 14.9816 3.73318 14.9443 3.64181C14.907 3.55044 14.852 3.46733 14.7825 3.39726L11.6025 0.217496C11.5324 0.14799 11.4493 0.0930006 11.3579 0.05568C11.2665 0.0183593 11.1687 -0.000558092 11.07 1.25348e-05C10.9713 -0.000558092 10.8734 0.0183593 10.7821 0.05568C10.6907 0.0930006 10.6076 0.14799 10.5375 0.217496L8.415 2.33984L0.217512 10.5367C0.148001 10.6068 0.0930074 10.6899 0.055684 10.7813C0.0183606 10.8726 -0.000558133 10.9705 1.25357e-05 11.0692V14.249C1.25357e-05 14.4478 0.07903 14.6386 0.219682 14.7792C0.360334 14.9199 0.551099 14.9989 0.750011 14.9989H3.93001C4.03495 15.0046 4.13993 14.9882 4.23812 14.9507C4.33632 14.9133 4.42554 14.8556 4.50001 14.7814L12.6525 6.58452L14.7825 4.49968C14.8509 4.42699 14.9067 4.34334 14.9475 4.2522C14.9547 4.19242 14.9547 4.13199 14.9475 4.07221C14.951 4.0373 14.951 4.00213 14.9475 3.96722L15 3.92972ZM3.62251 13.499H1.50001V11.3767L8.9475 3.92972L11.07 6.05206L3.62251 13.499ZM12.1275 4.99464L10.005 2.8723L11.07 1.81488L13.185 3.92972L12.1275 4.99464Z"/>
+            </svg>
+          </button>
+          <span>johndoe123@cvsu.edu.ph</span>
+        </div>
+
+        <div>
+          <button class="edit-btn" title="Edit" onclick="openEditModal('birthday')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path d="M15 3.92972C15.0006 3.83102 14.9816 3.73318 14.9443 3.64181C14.907 3.55044 14.852 3.46733 14.7825 3.39726L11.6025 0.217496C11.5324 0.14799 11.4493 0.0930006 11.3579 0.05568C11.2665 0.0183593 11.1687 -0.000558092 11.07 1.25348e-05C10.9713 -0.000558092 10.8734 0.0183593 10.7821 0.05568C10.6907 0.0930006 10.6076 0.14799 10.5375 0.217496L8.415 2.33984L0.217512 10.5367C0.148001 10.6068 0.0930074 10.6899 0.055684 10.7813C0.0183606 10.8726 -0.000558133 10.9705 1.25357e-05 11.0692V14.249C1.25357e-05 14.4478 0.07903 14.6386 0.219682 14.7792C0.360334 14.9199 0.551099 14.9989 0.750011 14.9989H3.93001C4.03495 15.0046 4.13993 14.9882 4.23812 14.9507C4.33632 14.9133 4.42554 14.8556 4.50001 14.7814L12.6525 6.58452L14.7825 4.49968C14.8509 4.42699 14.9067 4.34334 14.9475 4.2522C14.9547 4.19242 14.9547 4.13199 14.9475 4.07221C14.951 4.0373 14.951 4.00213 14.9475 3.96722L15 3.92972ZM3.62251 13.499H1.50001V11.3767L8.9475 3.92972L11.07 6.05206L3.62251 13.499ZM12.1275 4.99464L10.005 2.8723L11.07 1.81488L13.185 3.92972L12.1275 4.99464Z"/>
+            </svg>            
+          </button>
+          <span>01/08/1987</span>
+        </div>
+
+        <div>
+          <button class="edit-btn" title="Edit" onclick="openEditModal('gender')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path d="M15 3.92972C15.0006 3.83102 14.9816 3.73318 14.9443 3.64181C14.907 3.55044 14.852 3.46733 14.7825 3.39726L11.6025 0.217496C11.5324 0.14799 11.4493 0.0930006 11.3579 0.05568C11.2665 0.0183593 11.1687 -0.000558092 11.07 1.25348e-05C10.9713 -0.000558092 10.8734 0.0183593 10.7821 0.05568C10.6907 0.0930006 10.6076 0.14799 10.5375 0.217496L8.415 2.33984L0.217512 10.5367C0.148001 10.6068 0.0930074 10.6899 0.055684 10.7813C0.0183606 10.8726 -0.000558133 10.9705 1.25357e-05 11.0692V14.249C1.25357e-05 14.4478 0.07903 14.6386 0.219682 14.7792C0.360334 14.9199 0.551099 14.9989 0.750011 14.9989H3.93001C4.03495 15.0046 4.13993 14.9882 4.23812 14.9507C4.33632 14.9133 4.42554 14.8556 4.50001 14.7814L12.6525 6.58452L14.7825 4.49968C14.8509 4.42699 14.9067 4.34334 14.9475 4.2522C14.9547 4.19242 14.9547 4.13199 14.9475 4.07221C14.951 4.0373 14.951 4.00213 14.9475 3.96722L15 3.92972ZM3.62251 13.499H1.50001V11.3767L8.9475 3.92972L11.07 6.05206L3.62251 13.499ZM12.1275 4.99464L10.005 2.8723L11.07 1.81488L13.185 3.92972L12.1275 4.99464Z"/>
+            </svg>            
+          </button>
+          <span>Man</span>
+        </div>
+
+      </div>
+    </div>
+
+      <div class="about-me">
+        <div class="about-title">About me
+          <button class="edit-btn" title="Edit" onclick="openEditModal('about')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+            <path d="M15 3.92972C15.0006 3.83102 14.9816 3.73318 14.9443 3.64181C14.907 3.55044 14.852 3.46733 14.7825 3.39726L11.6025 0.217496C11.5324 0.14799 11.4493 0.0930006 11.3579 0.05568C11.2665 0.0183593 11.1687 -0.000558092 11.07 1.25348e-05C10.9713 -0.000558092 10.8734 0.0183593 10.7821 0.05568C10.6907 0.0930006 10.6076 0.14799 10.5375 0.217496L8.415 2.33984L0.217512 10.5367C0.148001 10.6068 0.0930074 10.6899 0.055684 10.7813C0.0183606 10.8726 -0.000558133 10.9705 1.25357e-05 11.0692V14.249C1.25357e-05 14.4478 0.07903 14.6386 0.219682 14.7792C0.360334 14.9199 0.551099 14.9989 0.750011 14.9989H3.93001C4.03495 15.0046 4.13993 14.9882 4.23812 14.9507C4.33632 14.9133 4.42554 14.8556 4.50001 14.7814L12.6525 6.58452L14.7825 4.49968C14.8509 4.42699 14.9067 4.34334 14.9475 4.2522C14.9547 4.19242 14.9547 4.13199 14.9475 4.07221C14.951 4.0373 14.951 4.00213 14.9475 3.96722L15 3.92972ZM3.62251 13.499H1.50001V11.3767L8.9475 3.92972L11.07 6.05206L3.62251 13.499ZM12.1275 4.99464L10.005 2.8723L11.07 1.81488L13.185 3.92972L12.1275 4.99464Z"/>
+            </svg>          
+        </button>
+      </div>
+        <div class="about-content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex maiores voluptatibus nemo veritatis, facilis accusamus molestiae blanditiis voluptate consequuntur. Officia aliquid facilis ullam tempora nemo incidunt non soluta a repellendus omnis. Optio, similique! Enim quibusdam aut, quos adipisci nulla eveniet, dolores quae alias molestiae quod perspiciatis ratione veniam repellendus neque!
+        </div>
+      </div>
+
+  </div>
+
+  <div class="schedule">
+    <div class="schedule-header">My Schedule</div>
+    <div class="schedule-filters">
+      <div class="sched-filters">Day</div>
+      <div class="sched-filters">Start</div>
+      <div class="sched-filters">End</div>
+    </div>
+
+  <div class="schedule-rows-list">
+      <div class="schedule-row">
+          <div class="schedule-day">Monday</div>
+          <div class="schedule-start">8:30 am</div>
+          <div class="schedule-end">12:30 pm</div>
+      </div>
+      <div class="schedule-row">
+          <div class="schedule-day">Tuesday</div>
+          <div class="schedule-start">11:00 am</div>
+          <div class="schedule-end">5:00 pm</div>
+      </div>
+      <div class="schedule-row">
+          <div class="schedule-day">Wednesday</div>
+          <div class="schedule-start">3:00pm</div>
+          <div class="schedule-end">8:00 pm</div>
+      </div>
+      <div class="schedule-row">
+          <div class="schedule-day">Thursday</div>
+          <div class="schedule-start">8:00 am</div>
+          <div class="schedule-end">4:00 pm</div>
+      </div>
+      <div class="schedule-row">
+          <div class="schedule-day">Friday</div>
+          <div class="schedule-start">8:00 am</div>
+          <div class="schedule-end">4:00 pm</div>
+      </div>
+      <div class="schedule-row">
+          <div class="schedule-day">Saturday</div>
+          <div class="schedule-start">8:00 am</div>
+          <div class="schedule-end">4:00 pm</div>
+      </div>                    
+      <div class="schedule-row">
+          <div class="schedule-day">Sunday</div>
+          <div class="schedule-start">8:00 am</div>
+          <div class="schedule-end">4:00 pm</div>
+      </div>
+  </div>
+  </div>
+</div>
+
+<footer>
+    2025 | ManageIT - Cavite State University Imus Campus
+</footer>
+
+<!-- Modal -->
+<div class="modal" id="editModal">
+  <div class="modal-content">
+    <h3>Edit Info</h3>
+    <input type="text" id="modalInput">
+    <button onclick="saveEdit()">Save</button>
+    <button onclick="closeModal()">Cancel</button>
+  </div>
+</div>
+
+<script>
+  let currentField = '';
+
+  function openEditModal(field) {
+    currentField = field;
+    const value = document.getElementById(field).innerText;
+    document.getElementById('modalInput').value = value;
+    document.getElementById('editModal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('editModal').style.display = 'none';
+  }
+
+  function saveEdit() {
+    const newValue = document.getElementById('modalInput').value;
+    document.getElementById(currentField).innerText = newValue;
+    closeModal();
+  }
+</script>
+</body>
+</html>
