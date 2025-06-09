@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/employees&team-user.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Test</title>
+</head>
+<body>
+
+
+  <div class="sidebar">
+    <img src="images/logo.png" class="logo" alt="Logo">
+        <img src="https://styles.redditmedia.com/t5_j3i1i/styles/communityIcon_y35nhslp44751.png" id="ProfilePicture" alt="Profile Picture">
+        <p class="fullname">Last Name, First Name</p>
+        <a href="profile-user.html" class="myprofile">Edit Profile</a>
+
+        <a href="dashboard-user.html" class="sidebarlink">
+            <img src="images/dashboard-icon.png" class="icon" alt="Dashboard Icon"> Dashboard
+        </a>
+        <a href="project&task-user.html" class="sidebarlink">
+            <img src="images/project-and-task-icon.png" class="icon" alt="Project and Task Icon"> Project and Task
+        </a>
+        <a href="employees&team-user.html" class="sidebarlink">
+            <img src="images/employee-and-team-icon.png" class="icon" alt="Employee and Team Icon"> Employee and Team
+        </a>
+        <a href="report&files-user.html" class="sidebarlink">
+            <img src="images/report-and-files-icon.png" class="icon" alt="Report and Files Icon"> Report and Files
+        </a>
+        <a href="settings-user.html" class="sidebarlink">
+            <img src="images/settings-icon.png" class="icon" alt="Settings Icon"> Settings
+        </a>
+        <hr class="sidebarline">
+        <a href="sign_out.html" class="sidebarlink">
+            <img src="images/sign-out-icon.png" class="icon" alt="Sign Out Icon"> Sign out
+        </a>
+</div>
+
+<div class="main-content">
+    <div class="main-content-inner">
+        <h1 class="dashboard-title">Employees and Team</h1>
+        <h2 class="destination"><span class="dashboard">Employees and Team</span> / <span class="home">Home</span></h2>
+
+        <div class="parent">
+
+            <button class="join-teams team-btn">
+                Join<br>Team
+                <svg xmlns="http://www.w3.org/2000/svg" width="97" height="81" viewBox="0 0 97 81" fill="none">
+                <path d="M72.5455 41.5C83.9973 41.5 93.2727 32.2144 93.2727 20.75C93.2727 9.28562 83.9973 0 72.5455 0C61.0936 0 51.8182 9.28562 51.8182 20.75C51.8182 32.2144 61.0936 41.5 72.5455 41.5ZM25.9091 31.125V20.75C25.9091 17.8969 23.5773 15.5625 20.7273 15.5625C17.8773 15.5625 15.5455 17.8969 15.5455 20.75V31.125H5.18182C2.33182 31.125 0 33.4594 0 36.3125C0 39.1656 2.33182 41.5 5.18182 41.5H15.5455V51.875C15.5455 54.7281 17.8773 57.0625 20.7273 57.0625C23.5773 57.0625 25.9091 54.7281 25.9091 51.875V41.5H36.2727C39.1227 41.5 41.4545 39.1656 41.4545 36.3125C41.4545 33.4594 39.1227 31.125 36.2727 31.125H25.9091ZM72.5455 51.875C58.71 51.875 31.0909 58.8262 31.0909 72.625V77.8125C31.0909 80.6656 33.4227 83 36.2727 83H108.818C111.668 83 114 80.6656 114 77.8125V72.625C114 58.8262 86.3809 51.875 72.5455 51.875Z" fill="currentColor"/>
+                </svg>
+            </button>
+            
+            <button class="create-team team-btn">
+                Create<br>Team
+                <svg xmlns="http://www.w3.org/2000/svg" width="109" height="88" viewBox="0 0 109 88" fill="none">
+                <path d="M72.5 0.00512811C69.0269 0.0119038 65.698 1.33246 63.2421 3.67773C60.7862 6.023 59.4034 9.20193 59.3963 12.5186C59.4048 15.8344 60.7883 19.0121 63.244 21.3562C65.6997 23.7004 69.0278 25.0202 72.5 25.027C75.9731 25.0202 79.302 23.6997 81.7579 21.3544C84.2138 19.0091 85.5966 15.8302 85.6037 12.5135C85.5966 9.1968 84.2138 6.01788 81.7579 3.67261C79.302 1.32734 75.9731 0.0119038 72.5 0.00512811ZM45.6481 19.8985C42.175 19.9053 38.8462 21.2259 36.3903 23.5711C33.9344 25.9164 32.5515 29.0953 32.5444 32.412C32.553 35.7278 33.9364 38.9054 36.3922 41.2496C38.8479 43.5938 42.1759 44.9136 45.6481 44.9204C49.1213 44.9136 52.4501 43.5931 54.906 41.2478C57.3619 38.9025 58.7448 35.7236 58.7519 32.4069C58.7448 29.0902 57.3619 25.9113 54.906 23.566C52.4501 21.2207 49.1213 19.9053 45.6481 19.8985ZM99.6741 19.8985C96.2019 19.9066 92.8744 21.2278 90.4197 23.5729C87.9649 25.9181 86.5828 29.0962 86.5757 32.412C86.5843 35.7278 87.9677 38.9054 90.4235 41.2496C92.8792 43.5938 96.2072 44.9136 99.6795 44.9204C103.152 44.9123 106.479 43.5911 108.934 41.246C111.389 38.9009 112.771 35.7227 112.778 32.4069C112.771 29.0902 111.388 25.9113 108.932 23.566C106.476 21.2207 103.147 19.9053 99.6741 19.8985ZM18.7963 35.6532C15.3232 35.66 11.9943 36.9806 9.53842 39.3258C7.08253 41.6711 5.69969 44.85 5.69259 48.1667C5.70253 51.4812 7.0868 54.6569 9.54253 56.9992C11.9983 59.3414 15.3255 60.6594 18.7963 60.6648C22.268 60.6594 25.5961 59.3407 28.052 56.9974C30.5078 54.654 31.8915 51.4769 31.9 48.1616C31.8915 44.8458 30.508 41.6682 28.0523 39.324C25.5966 36.9799 22.2685 35.66 18.7963 35.6532ZM72.5 35.6532C69.0269 35.66 65.698 36.9806 63.2421 39.3258C60.7862 41.6711 59.4034 44.85 59.3963 48.1667C59.4062 51.4812 60.7905 54.6569 63.2462 56.9992C65.702 59.3414 69.0292 60.6594 72.5 60.6648C75.9717 60.6594 79.2998 59.3407 81.7557 56.9974C84.2115 54.654 85.5952 51.4769 85.6037 48.1616C85.5952 44.8458 84.2117 41.6682 81.756 39.324C79.3003 36.9799 75.9722 35.66 72.5 35.6532ZM126.204 35.6532C122.731 35.66 119.402 36.9806 116.946 39.3258C114.49 41.6711 113.107 44.85 113.1 48.1667C113.11 51.4812 114.494 54.6569 116.95 56.9992C119.406 59.3414 122.733 60.6594 126.204 60.6648C129.675 60.6594 133.003 59.3407 135.459 56.9974C137.915 54.654 139.299 51.4769 139.307 48.1616C139.299 44.8458 137.915 41.6682 135.46 39.324C133.004 36.9799 129.676 35.66 126.204 35.6532ZM62.7367 63.5214C58.9198 63.5282 55.2612 64.9788 52.5617 67.5557C49.8622 70.1326 48.3419 73.6259 48.3333 77.2709V94H96.6667V77.2709C96.6581 73.6259 95.1378 70.1326 92.4383 67.5557C89.7388 64.9788 86.0802 63.5282 82.2633 63.5214H62.7367ZM9.03296 68.6499H28.5596C33.6078 68.6499 37.5926 72.4501 37.5926 77.2709V88.8715H0V77.2709C0 72.4501 3.97945 68.6499 9.03296 68.6499ZM116.44 68.6499H135.967C141.015 68.6499 145 72.4501 145 77.2709V88.8715H107.407V77.2709C107.407 72.4501 111.387 68.6499 116.44 68.6499Z" fill="currentColor"/>
+                </svg>
+            </button>
+
+<div class="my-teams"> 
+  <div class="my-teams-header">My Teams</div>
+  <div class="my-teams-list-wrapper">
+    <a href="#" class="my-teams-list-link">
+      <div class="my-teams-list">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ZFe40mOwd-MzyLfIfybO8F1I82vCJjf3HQ&s" class="my-teams-avatar"/>
+        <div class="my-teams-info">
+          <div class="my-teams-name">Team 1</div>
+          <div class="my-teams-details">
+            <div class="my-teams-labels">
+              <div>Date Created:</div>
+              <div>No. of Participants:</div>
+            </div>
+            <div class="my-teams-values">
+              <div>April 5, 2025</div>
+              <div>7 Members</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="#" class="my-teams-list-link">
+      <div class="my-teams-list">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ZFe40mOwd-MzyLfIfybO8F1I82vCJjf3HQ&s" class="my-teams-avatar"/>
+        <div class="my-teams-info">
+          <div class="my-teams-name">Team 1</div>
+          <div class="my-teams-details">
+            <div class="my-teams-labels">
+              <div>Date Created:</div>
+              <div>No. of Participants:</div>
+            </div>
+            <div class="my-teams-values">
+              <div>April 5, 2025</div>
+              <div>7 Members</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="#" class="my-teams-list-link">
+      <div class="my-teams-list">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ZFe40mOwd-MzyLfIfybO8F1I82vCJjf3HQ&s" class="my-teams-avatar"/>
+        <div class="my-teams-info">
+          <div class="my-teams-name">Team 1</div>
+          <div class="my-teams-details">
+            <div class="my-teams-labels">
+              <div>Date Created:</div>
+              <div>No. of Participants:</div>
+            </div>
+            <div class="my-teams-values">
+              <div>April 5, 2025</div>
+              <div>7 Members</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="#" class="my-teams-list-link">
+      <div class="my-teams-list">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ZFe40mOwd-MzyLfIfybO8F1I82vCJjf3HQ&s" class="my-teams-avatar"/>
+        <div class="my-teams-info">
+          <div class="my-teams-name">Team 1</div>
+          <div class="my-teams-details">
+            <div class="my-teams-labels">
+              <div>Date Created:</div>
+              <div>No. of Participants:</div>
+            </div>
+            <div class="my-teams-values">
+              <div>April 5, 2025</div>
+              <div>7 Members</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="#" class="my-teams-list-link">
+      <div class="my-teams-list">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ZFe40mOwd-MzyLfIfybO8F1I82vCJjf3HQ&s" class="my-teams-avatar"/>
+        <div class="my-teams-info">
+          <div class="my-teams-name">Team 1</div>
+          <div class="my-teams-details">
+            <div class="my-teams-labels">
+              <div>Date Created:</div>
+              <div>No. of Participants:</div>
+            </div>
+            <div class="my-teams-values">
+              <div>April 5, 2025</div>
+              <div>7 Members</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>    
+    <a href="#" class="my-teams-list-link">
+      <div class="my-teams-list">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ZFe40mOwd-MzyLfIfybO8F1I82vCJjf3HQ&s" class="my-teams-avatar"/>
+        <div class="my-teams-info">
+          <div class="my-teams-name">Team 1</div>
+          <div class="my-teams-details">
+            <div class="my-teams-labels">
+              <div>Date Created:</div>
+              <div>No. of Participants:</div>
+            </div>
+            <div class="my-teams-values">
+              <div>April 5, 2025</div>
+              <div>7 Members</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>            
+  </div>
+</div>
+
+<div class="joined-teams">
+  <div class="joined-teams-header">My Teams</div>
+  <div class="joined-teams-list-wrapper">
+    <a href="#" class="joined-teams-list-link">
+      <div class="joined-teams-list">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ZFe40mOwd-MzyLfIfybO8F1I82vCJjf3HQ&s" 
+          class="joined-teams-avatar" />
+        <div class="joined-teams-info">
+          <div class="joined-teams-title">Advance Database Management Systems</div>
+          <div class="joined-teams-details">
+            <div class="joined-teams-labels">
+              <div>Created by:</div>
+              <div>Date Joined:</div>
+              <div>No. of Participants:</div>
+            </div>
+            <div class="joined-teams-values">
+              <div>Kristine Woods</div>
+              <div>April 5, 2025</div>
+              <div>40 Members</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="#" class="joined-teams-list-link">
+      <div class="joined-teams-list">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ZFe40mOwd-MzyLfIfybO8F1I82vCJjf3HQ&s" 
+          class="joined-teams-avatar" />
+        <div class="joined-teams-info">
+          <div class="joined-teams-title">Advance Database Management Systems</div>
+          <div class="joined-teams-details">
+            <div class="joined-teams-labels">
+              <div>Created by:</div>
+              <div>Date Joined:</div>
+              <div>No. of Participants:</div>
+            </div>
+            <div class="joined-teams-values">
+              <div>Kristine Woods</div>
+              <div>April 5, 2025</div>
+              <div>40 Members</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="#" class="joined-teams-list-link">
+      <div class="joined-teams-list">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ZFe40mOwd-MzyLfIfybO8F1I82vCJjf3HQ&s" 
+          class="joined-teams-avatar" />
+        <div class="joined-teams-info">
+          <div class="joined-teams-title">Advance Database Management Systems</div>
+          <div class="joined-teams-details">
+            <div class="joined-teams-labels">
+              <div>Created by:</div>
+              <div>Date Joined:</div>
+              <div>No. of Participants:</div>
+            </div>
+            <div class="joined-teams-values">
+              <div>Kristine Woods</div>
+              <div>April 5, 2025</div>
+              <div>40 Members</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>     
+    <a href="#" class="joined-teams-list-link">
+      <div class="joined-teams-list">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ZFe40mOwd-MzyLfIfybO8F1I82vCJjf3HQ&s" 
+          class="joined-teams-avatar" />
+        <div class="joined-teams-info">
+          <div class="joined-teams-title">Advance Database Management Systems</div>
+          <div class="joined-teams-details">
+            <div class="joined-teams-labels">
+              <div>Created by:</div>
+              <div>Date Joined:</div>
+              <div>No. of Participants:</div>
+            </div>
+            <div class="joined-teams-values">
+              <div>Kristine Woods</div>
+              <div>April 5, 2025</div>
+              <div>40 Members</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>       
+  </div>
+</div>
+
+
+<div class="employees">
+    <div class="employees-header">Fellow Employees</div>
+        <div class="employees-rows-list">
+            <div class="employees-row">
+              <img
+                src="https://pbs.twimg.com/ext_tw_video_thumb/1645930459421868033/pu/img/2tjSMCK9FBhSsdqn.jpg"
+                class="employee-img"/>
+              <a href="employeelink.html" class="employee-name">Taylor Swift</a>
+            </div>
+            <div class="employees-row">
+              <img
+                src="https://pbs.twimg.com/ext_tw_video_thumb/1645930459421868033/pu/img/2tjSMCK9FBhSsdqn.jpg"
+                class="employee-img"/>
+              <a href="employeelink.html" class="employee-name">Taylor Swift</a>
+            </div>
+            <div class="employees-row">
+              <img
+                src="https://pbs.twimg.com/ext_tw_video_thumb/1645930459421868033/pu/img/2tjSMCK9FBhSsdqn.jpg"
+                class="employee-img"/>
+              <a href="employeelink.html" class="employee-name">Taylor Swift</a>
+            </div>
+            <div class="employees-row">
+              <img
+                src="https://pbs.twimg.com/ext_tw_video_thumb/1645930459421868033/pu/img/2tjSMCK9FBhSsdqn.jpg"
+                class="employee-img"/>
+              <a href="employeelink.html" class="employee-name">Taylor Swift</a>
+            </div>
+            <div class="employees-row">
+              <img
+                src="https://pbs.twimg.com/ext_tw_video_thumb/1645930459421868033/pu/img/2tjSMCK9FBhSsdqn.jpg"
+                class="employee-img"/>
+              <a href="employeelink.html" class="employee-name">Taylor Swift</a>
+            </div>                                                
+        </div>
+    </div>
+
+</div>
+    
+</div>
+</div>
+
+<footer>
+        2025 | ManageIT - Cavite State University Imus Campus   
+</footer>
+
+</body>
+</html>

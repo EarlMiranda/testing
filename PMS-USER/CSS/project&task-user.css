@@ -1,0 +1,393 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: #F3F6F9;
+  overflow-x: hidden;
+    height: 100%;
+  overflow-y: auto;
+}
+
+.sidebar {
+  width: 300px;
+  background: linear-gradient(180deg, #507238 0%, #639044 35.01%, #639044 78.95%);
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1000;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+#ProfilePicture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+}
+
+.fullname,
+.myprofile {
+  color: #ecf0f1;
+  font-family: Poppins, sans-serif;
+  text-align: center;
+}
+
+.fullname {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10px auto 0;
+}
+
+.myprofile {
+  font-size: 12px;
+  font-weight: 200;
+  text-decoration: underline;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.sidebarlink {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 500;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  padding: 15px 0 15px 40px;
+  text-decoration: none;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.sidebarlink .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+.sidebarlink:hover {
+  background-color: #6c9e4b;
+}
+
+.sidebarline {
+  border: none;
+  height: 1px;
+  background-color: white;
+  margin: 10px 20px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #ecf0f1;
+}
+
+.main-content-inner {
+  padding: 20px 60px 50px 350px;
+}
+
+.page-title {
+  font-family: Poppins, sans-serif;
+  color: #232323;
+  font-size: 36px;
+  font-weight: 200;
+}
+
+.destination {
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #2c3e50;
+  margin: 20px 0;
+}
+
+.destination span {
+  color: #232323;
+}
+
+.destination .home {
+  color: blue;
+}
+
+.top-panels {
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.5fr 2fr 2fr 1fr 2fr 1fr;
+  grid-template-rows: repeat(7, auto);
+  grid-gap: 30px;
+  margin-top: 30px;
+min-height: 0; 
+}
+
+.todo-list,
+.saved-works,
+.completed {
+  background: rgba(255, 255, 255, 0.94);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  height: 400px;
+}
+
+.task-library {
+  background: rgba(255, 255, 255, 0.94);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  height: 500px;    
+  width: 100%; 
+}
+
+.todo-list {
+  grid-area: 1 / 1 / 4 / 5;
+}
+
+.saved-works {
+  grid-area: 1 / 5 / 4 / 7;
+}
+
+.completed {
+  grid-area: 1 / 7 / 4 / 9;
+  
+}
+
+.task-library {
+  grid-area: 4 / 2 / 8 / 9;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+}
+
+/* Shared Panel Styles */
+.todolist-header,
+.savedworks-header,
+.completed-header,
+.library-header {
+  color: #7A7F7A;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 20px auto auto 20px;
+  position: sticky;
+}
+
+.todolist-filters,
+.savedworks-filters,
+.completed-filters,
+.library-filters {
+  display: grid;
+  border-bottom: 2px solid #EEE;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-family: Poppins;
+  color: #BBC0BB;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+  padding-left: 40px;
+  padding-bottom: 10px;
+}
+
+.todolist-filters {
+  grid-template-columns: 0.5fr 2fr 0.5fr 1.5fr;
+}
+
+.savedworks-filters,
+.completed-filters {
+  grid-template-columns: 1fr 1fr;
+}
+
+.library-filters {
+  grid-template-columns: 1fr 0.5fr 2fr 0.5fr 1fr 1fr 1fr;
+}
+
+.todolist-rows-list,
+.savedworks-rows-list,
+.completed-rows-list,
+.library-rows-list {
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: 10px;
+  margin-left: 30px;
+}
+
+.todolist-row,
+.savedworks-row,
+.completed-row,
+.library-row {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  min-height: 60px;
+  box-sizing: border-box;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  color: #7A7F7A;
+}
+
+.todolist-row {
+  grid-template-columns: 0.5fr 2fr 0.5fr 1.5fr;
+}
+
+.savedworks-row,
+.completed-row {
+  grid-template-columns: 1fr 1fr;
+}
+
+.library-row {
+  grid-template-columns: 1fr 0.5fr 2fr 0.5fr 1fr 1fr 1fr;
+}
+
+.todolist-title a,
+.saved-title,
+.completed-title,
+.library-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #7A7F7A;
+  text-decoration: none;
+}
+
+.todo-priority,
+.todolist-type,
+.todolist-date,
+.saved-lastopened,
+.completed-status,
+.library-team,
+.library-priority,
+.library-type,
+.library-assignedby,
+.library-status,
+.library-date {
+  font-family: Poppins;
+  color: #7A7F7A;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.priority {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.priority.high {
+  background-color: red;
+}
+
+.priority.medium {
+  background-color: orange;
+}
+
+.priority.low {
+  background-color: green;
+}
+
+.status {
+  padding: 3px 8px;
+  border-radius: 12px;
+  color: white;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.status.completed {
+  background-color: #28a745;
+}
+
+.status.in-progress {
+  background-color: #007bff;
+}
+
+.status.pending {
+  background-color: #ffc107;
+  color: black;
+}
+
+.create-btn {
+  background-color: #FEFEFF;
+  font-family: Poppins, sans-serif;
+  font-weight: 900;
+  text-align: left;
+  color: #6c964f;
+  border: none;
+  border-radius: 8px;
+  padding: 30px 100px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  line-height: 1.1;
+}
+
+.create-work.create-btn {
+  position: relative;
+  overflow: hidden; 
+}
+
+.create-work.create-btn svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;    
+  height: auto;
+  pointer-events: none;
+  color: #6c964f; 
+
+}
+
+.create-btn:hover {
+  background-color: #6C964F;
+  color: #FEFEFF;
+}
+
+.createbtn:hover svg {
+  color: #FEFEFF;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background-color: #BFBDBD;
+  border-radius: 20px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  color: #000;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  padding: 15px 0;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.08);
+}

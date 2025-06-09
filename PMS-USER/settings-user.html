@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/settings-user.css" />
+</head>
+<body>
+
+  <div class="sidebar">
+    <img src="images/logo.png" class="logo" alt="Logo">
+        <img src="https://styles.redditmedia.com/t5_j3i1i/styles/communityIcon_y35nhslp44751.png" id="ProfilePicture" alt="Profile Picture">
+        <p class="fullname">Last Name, First Name</p>
+        <a href="profile-user.html" class="myprofile">Edit Profile</a>
+
+        <a href="dashboard-user.html" class="sidebarlink">
+            <img src="images/dashboard-icon.png" class="icon" alt="Dashboard Icon"> Dashboard
+        </a>
+        <a href="project&task-user.html" class="sidebarlink">
+            <img src="images/project-and-task-icon.png" class="icon" alt="Project and Task Icon"> Project and Task
+        </a>
+        <a href="employees&team-user.html" class="sidebarlink">
+            <img src="images/employee-and-team-icon.png" class="icon" alt="Employee and Team Icon"> Employee and Team
+        </a>
+        <a href="report&files-user.html" class="sidebarlink">
+            <img src="images/report-and-files-icon.png" class="icon" alt="Report and Files Icon"> Report and Files
+        </a>
+        <a href="settings-user.html" class="sidebarlink">
+            <img src="images/settings-icon.png" class="icon" alt="Settings Icon"> Settings
+        </a>
+        <hr class="sidebarline">
+        <a href="sign_out.html" class="sidebarlink">
+            <img src="images/sign-out-icon.png" class="icon" alt="Sign Out Icon"> Sign out
+        </a>
+</div>
+
+<div class="main-content">
+    <div class="main-content-inner">
+        <h1 class="page-title">User and Settings</h1>
+        <h2 class="destination"><span class="dashboard">User and Settings</span> / <span class="home">Home</span></h2>
+
+        <div class="parent">
+            <div class="account-section">
+                <h2>Your Account</h2> 
+ 
+
+                <div class="label-container">
+                    <div class="label-and-description">
+                        <p class="label">Photo</p>
+                        <p class="description">Your display photo will be visible across the website.</p>
+                    </div>
+                    <div class="display-photo" id="profilePhotoWrapper">
+                        <img src="https://uploads.dailydot.com/2025/04/tung-tung-sahur-meme-2.png?q=65&auto=format&w=800" alt="Display Photo" class="display-photo" id="profilePhoto">
+                    </div>
+                    <div class="edit-button" id="photoEditButtonWrapper">
+                        <button onclick="togglePhotoEdit()">Edit</button>
+                        <!-- file input will appear here -->
+                    </div>
+                </div>
+
+
+                <div class="label-container">
+                    <div class="label-and-description">
+                        <p class="label">Name</p>
+                        <p class="description">Your name will be visible across the website.</p>
+                    </div>
+                    <div class="user-info">
+                        <p class="name" id="userName">Tung Tung Tung Sahur</p>
+                    </div>
+                    <div class="edit-button">
+                        <button onclick="toggleEdit('userName', this)">Edit</button>
+                    </div>          
+                </div>
+ 
+
+                <div class="label-container">
+                    <div class="label-and-description">
+                        <p class="label">Email Address</p>
+                        <p class="description">Your email address is used for login and notifications, and may be visible to other users based on your privacy settings.</p>
+                    </div>
+                    <div class="user-info">
+                        <p class="email-add" id="userEmail">Tungtungtungsahur@cvsu.edu.ph</p>
+                    </div>
+                    <div class="edit-button">
+                        <button onclick="toggleEdit('userEmail', this)">Edit</button>
+                    </div>
+                </div>
+
+
+                <div class="label-container">
+                    <div class="label-and-description">
+                        <p class="label">Password</p>
+                        <p class="description">Your password is used to log in into your account.</p>
+                    </div>
+                    <div class="user-info">
+                        <p class="password-info" id="userPassword">P**********</p>
+                    </div>
+                    <div class="edit-button">
+                        <button onclick="togglePasswordEdit('userPassword', this)">Edit</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="notfications-section">
+                <h2>Notifications</h2>
+
+
+                <div class="notification-group">
+                    <div class="group-left">
+                        <div class="group-header">Email Notifications</div>
+                        <div class="group-description">You will receive email notifications when enabled. You can turn them off at any time.</div>
+                    </div>
+                    <div class="group-right">
+                        <label class="option"><input type="checkbox" name="email"><div class="option-text"><span class="option-label">News and Updates</span><span class="option-description">Stay updated with news and announcements via email.</span></div></label>
+                        <label class="option"><input type="checkbox" name="email"><div class="option-text"><span class="option-label">Reminders</span><span class="option-description">Receive email reminders for important tasks.</span></div></label>
+                        <label class="option"><input type="checkbox" name="email"><div class="option-text"><span class="option-label">Security Alerts</span><span class="option-description">Receive notifications for any suspicious activity on your account.</span></div></label>
+                    </div>
+                </div>
+
+
+
+                <div class="notification-group">
+                    <div class="group-left">
+                        <div class="group-header">In-Website Notifications</div>
+                        <div class="group-description">Receive notifications within the website for important updates. You can turn these off at any time.</div>
+                    </div>
+                    <div class="group-right">
+                        <label class="option"><input type="checkbox" name="website"><div class="option-text"><span class="option-label">Reminders</span><span class="option-description">Receive in-website reminders for important tasks.</span></div></label>
+                        <label class="option"><input type="checkbox" name="website"><div class="option-text"><span class="option-label">Security Alerts</span><span class="option-description">Receive in-website notifications for any suspicious activity on your account.</span></div></label>
+                        <label class="option"><input type="checkbox" name="website"><div class="option-text"><span class="option-label">Newly Assigned Tasks</span><span class="option-description">Receive in-website notifications for newly assigned tasks.</span></div></label>
+                        <label class="option"><input type="checkbox" name="website"><div class="option-text"><span class="option-label">Comments</span><span class="option-description">Receive in-website notifications when someone comments on your posts or updates.</span></div></label>
+                        <div class="save-button"><button>Save</button></div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</div>
+
+<footer>2025 | ManageIT - Cavite State University Imus Campus</footer>
+<script>
+function toggleEdit(elementId, button) {
+    const element = document.getElementById(elementId);
+    if (button.textContent === "Edit") {
+        const currentText = element.textContent;
+        const input = document.createElement("input");
+        input.type = "text";
+        input.value = currentText;
+        input.id = elementId;
+        input.className = "edit-input";
+        element.replaceWith(input);
+        button.textContent = "Save";
+    } else {
+        const input = document.getElementById(elementId);
+        const newText = input.value;
+        const p = document.createElement("p");
+        p.textContent = newText;
+        p.id = elementId;
+        p.className = input.className.includes("email") ? "email-add" : "name";
+        input.replaceWith(p);
+        button.textContent = "Edit";
+    }
+}
+
+function togglePasswordEdit(elementId, button) {
+    const element = document.getElementById(elementId);
+    if (button.textContent === "Edit") {
+        const input = document.createElement("input");
+        input.type = "password";
+        input.placeholder = "Enter new password";
+        input.id = elementId;
+        input.className = "edit-input";
+        element.replaceWith(input);
+        button.textContent = "Save";
+    } else {
+        const input = document.getElementById(elementId);
+        const masked = 'P' + '*'.repeat(10);
+        const p = document.createElement("p");
+        p.textContent = masked;
+        p.id = elementId;
+        p.className = "password-info";
+        input.replaceWith(p);
+        button.textContent = "Edit";
+    }
+}
+
+function togglePhotoEdit() {
+    const img = document.getElementById("profilePhoto");
+    const buttonWrapper = document.getElementById("photoEditButtonWrapper");
+    const button = buttonWrapper.querySelector("button");
+    let input = document.getElementById("photoInput");
+    if (!input) {
+        input = document.createElement("input");
+        input.type = "file";
+        input.accept = "image/*";
+        input.id = "photoInput";
+        input.className = "edit-input";
+        input.onchange = function () {
+            const file = input.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    img.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        };
+        // Insert input before the button
+        buttonWrapper.insertBefore(input, button);
+        button.textContent = "Save";
+    } else {
+        buttonWrapper.removeChild(input);
+        button.textContent = "Edit";
+    }
+}
+</script>
+</body>
+</html>
