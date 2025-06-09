@@ -1,0 +1,536 @@
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+text-decoration: none;
+}
+
+body {
+background-color: #F3F6F9;
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+}
+
+.sidebar {
+width: 300px;
+background: linear-gradient(180deg, #507238 0%, #639044 35.01%, #639044 78.95%);
+padding-top: 20px;
+position: fixed;
+top: 0;
+left: 0;
+height: 100vh;
+z-index: 1000;
+}
+
+.logo{
+width: 150px;
+height: 150px;
+display: block;
+margin: 0 auto;
+}
+
+#ProfilePicture {
+width: 100px;
+height: 100px;
+border-radius: 50%;
+display: block;
+margin: 20px auto;
+}
+
+.fullname {
+color: #ecf0f1;
+font-family: Poppins, sans-serif;
+font-size: 15px;
+font-weight: bold;
+text-align: center;
+margin: 10px auto 0;
+}
+
+.myprofile {
+color: #ecf0f1;
+font-family: Poppins, sans-serif;
+font-size: 12px;
+font-weight: 200;
+text-decoration: underline;
+display: block;
+text-align: center;
+margin-bottom: 30px;
+}
+
+.sidebarlink {
+display: flex;
+box-sizing: border-box;
+align-items: center;
+color: white;
+font-weight: 500;
+font-family: Poppins, sans-serif;
+font-size: 14px;
+padding: 15px 0 15px 40px;
+text-decoration: none;
+width: 100%;
+line-height: normal;
+transition: 0.3s ease;
+}
+
+.sidebarline{
+border: none;
+height: 1px;
+background-color: white;
+margin: 10px 20px;
+}
+
+.sidebarlink .icon {
+width: 24px;
+height: 24px;
+margin-right: 12px;
+}
+
+.sidebarlink:hover {
+background-color: #6c9e4b;
+transition: 0.3s;
+}
+
+.main-content {
+flex: 1;
+padding: 20px;
+background-color: #ecf0f1;
+}
+
+.main-content-inner {
+padding-left: 350px;
+padding-right: 60px;
+padding-top: 20px;
+padding-bottom: 50px;;
+}
+
+.page-title{
+font-family: Poppins, sans-serif;
+color: #232323;  
+font-size: 36px;
+font-weight: 200;
+line-height: normal;
+margin-bottom: 0px;
+}
+
+.destination {
+font-family: Poppins, sans-serif;
+font-weight: 500;
+font-size: 14px;
+color: #2c3e50;
+margin: 20px 0;
+}
+
+.destination span {
+color: #232323;  
+}
+
+.destination .home {
+color: blue;
+}
+.parent {
+display: grid;
+grid-template-columns: repeat(9, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-gap: 30px;
+margin-top: 30px;
+height: 750px; 
+justify-content: start;
+}
+
+.parent > div {
+background: rgba(255, 255, 255, 0.94);
+display: flex;
+flex-direction: column;
+align-items: flex-start; 
+border-radius: 10px;
+box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.08);
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+.summary-content {
+grid-column: span 3 / span 5;
+grid-row: span 2 / span 2;
+align-items: center; 
+padding: 10px 40px 10px 30px; 
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.summary-header {
+color: #7A7F7A;
+font-family: Poppins, sans-serif;
+font-size: 24px;
+font-weight: 700;
+width: 100%;
+}
+
+.summary-stats {
+display: flex;
+gap: 20px; 
+width: 100%;
+margin-left: 20px;
+margin-top: 25px;
+}
+
+.stat {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.stat-number {
+color: #639044;
+text-align: center;
+font-family: Poppins;
+font-size: 40px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+background: rgba(255, 255, 255, 0.94); 
+box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.08);
+padding: 10px 15px; 
+border-radius: 15px; 
+width: 75px; 
+height: 80px;
+text-align: center; 
+}
+
+.stat-label {
+color: #000;
+text-align: center;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top: 10px; 
+text-align: center; 
+}
+
+.button-container {
+margin-top: 16px;
+text-align: center;
+width: 100%;
+}
+
+.view-button {
+width: 128px;
+height: 41px;
+justify-content: center;
+align-items: center;
+color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+border-radius: 15px;
+background: #639044;
+margin-top: 20px;
+display: inline-block;
+transition: background-color 0.3s ease;
+}
+
+.view-button:hover {
+background-color: #507238; 
+}
+
+.academic-year {
+grid-column: span 2 / span 2;
+grid-column-start: 4;
+}
+
+.academicyear-title{
+color: #7A7F7A;
+text-align: center;
+font-family: Poppins;
+font-size: 16px;
+font-weight: 400;
+line-height: normal;
+margin-top: 30px;
+}
+
+.academicyear{
+color: #7A7F7A;
+text-align: center;
+font-family: Poppins;
+font-size: 36px;
+font-weight: 600;
+line-height: normal;
+margin-bottom: 30px;
+}
+
+.academic-year,
+.current-semester {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
+
+.academicyear-title,
+.semester-title {
+margin-bottom: 0;
+width: 100%;
+text-align: center;
+}
+
+.academicyear,
+.semester {
+margin-top: 0;
+width: 100%;
+text-align: center;
+}
+
+.current-semester {
+grid-column: span 2 / span 2;
+grid-column-start: 4;
+grid-row-start: 2;
+}
+
+.semester-title{
+color: #7A7F7A;
+text-align: center;
+font-family: Poppins;
+font-size: 16px;
+font-weight: 400;
+line-height: normal;
+margin-top: 30px;
+}
+.semester{
+color: #7A7F7A;
+text-align: center;
+font-family: Poppins;
+font-size: 36px;
+font-weight: 600;
+line-height: normal;
+text-transform: uppercase;
+margin-bottom: 30px;
+
+}
+
+.announcements {
+grid-column: span 5 / span 5;
+grid-row: span 3 / span 3;
+grid-column-start: 1;
+grid-row-start: 3;
+padding: 0; 
+
+}
+
+.announcement-row {
+display: grid;
+grid-template-columns: 6fr 3fr 3fr;
+align-items: center;
+padding: 20px 0;
+width: 100%;
+}
+
+.announcements-header {
+color: #7A7F7A;
+font-family: Poppins;
+font-size: 24px;
+font-weight: 700;
+margin: 20px auto auto 20px ;
+position: sticky;
+}
+
+.announcements-filters {
+display: grid;
+grid-template-columns: 6fr 3fr 3fr;
+border-bottom: 2px solid #EEE;
+width: 100%;
+margin-top: 20px;
+margin-bottom: 0;
+}
+
+.ann-filters {
+font-family: Poppins;
+color: #BBC0BB;
+font-size: 15px;
+font-weight: 500;
+line-height: normal;
+margin-left: 50px;
+}
+
+.announcement-rows-list {
+height: 350px; 
+width: 100%;
+margin-left: 50px;
+overflow-x: hidden;
+overflow-y: auto; 
+gap: 10px 0;
+}
+
+.announcement-title a {
+font-family: "Poppins", sans-serif;
+font-size: 16px;
+font-weight: 700;
+line-height: normal;
+color: #7A7F7A;
+}
+
+.announcement-author,
+.announcement-date {
+font-family: Poppins;
+color: #7A7F7A;
+font-size: 16px;
+font-weight: 500;
+margin-left: 10px;
+}
+
+
+.myrecentworks {
+grid-column: span 2 / span 2;
+grid-row: span 5 / span 5;
+grid-column-start: 6;
+grid-row-start: 1;
+}
+
+.recentworks-header {
+color: #7A7F7A;
+font-family: Poppins;
+font-size: 24px;
+font-weight: 700;
+margin: 20px 0 0 20px ;
+position: sticky;
+}
+
+.recentworks-filters {
+display: grid;
+grid-template-columns: 1fr 2fr;
+border-bottom: 2px solid #EEE;
+width: 100%;
+margin-top: 20px;
+margin-bottom: 0;
+}
+
+.rec-filters {
+font-family: Poppins;
+color: #BBC0BB;
+font-size: 15px;
+font-weight: 500;
+line-height: normal;
+margin-left: 30px;
+}
+
+.recentworks-rows-list {
+height: 100%; 
+width: 100%;
+margin-left: 30px;
+overflow-x: hidden;
+overflow-y: auto; 
+}
+
+.recentworks-title a {
+font-family: "Poppins", sans-serif;
+font-size: 16px;
+font-weight: 700;
+line-height: normal;
+color: #7A7F7A;
+}
+
+.recentworks-team {
+color: #7A7F7A;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.recentworks-row {
+display: grid;
+grid-template-columns: 1fr 2fr;
+align-items: center;
+padding: 20px 0;
+width: 100%;
+}
+
+.employees {
+grid-column: span 2 / span 2;
+grid-row: span 5 / span 5;
+grid-column-start: 8;
+grid-row-start: 1;
+}
+
+.employees-header {
+color: #7A7F7A;
+font-family: Poppins;
+font-size: 24px;
+font-weight: 700;
+margin-top: 20px;
+padding-bottom: 15px;
+padding-left: 20px;
+position: sticky;
+width: 100%;
+border-bottom: 2px solid #EEE;
+}
+
+.employees-rows-list {
+height: 100%; 
+width: 100%;
+overflow-x: hidden;
+overflow-y: auto; 
+}
+
+.employees-row {
+display: grid;
+grid-template-columns: 1fr 3fr;
+align-items: center;
+padding: 10px 0;
+width: 100%;
+margin-left: 20px;
+}
+
+.employee-img{
+width: 60px;
+height: 60px;
+border-radius: 50%;
+}
+
+.employee-name {
+color: #7A7F7A;
+font-family: Poppins;
+font-size: 18px;
+font-weight: 700;
+line-height: normal;
+text-decoration: none;
+}
+
+
+.employees-rows-list::-webkit-scrollbar,
+.recentworks-rows-list::-webkit-scrollbar,
+.announcement-rows-list::-webkit-scrollbar{
+border-radius: 25px;
+background-color: #EEEEEE;
+margin-right: 40px;
+}
+
+
+::-webkit-scrollbar-thumb {
+background-color: #BFBDBD;
+border-radius: 20px;
+margin-right: 30px;
+}
+
+footer {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+background-color: #ffffff;
+color: #000;
+font-size: 14px;
+font-family: "Poppins", sans-serif;
+font-weight: 300;
+text-align: center;
+padding: 15px 0;
+box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.08);
+} 
